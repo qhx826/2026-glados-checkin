@@ -1,1 +1,78 @@
-ewogICJmb3J0dW5lIjogewogICAgImRhdGUiOiAiMjAyNi0xMS0xMiIsCiAgICAibGV2ZWwiOiAi5bmz6aG6IiwKICAgICJsdWNreV9jb2xvciI6ICLpnZLnu78iLAogICAgImx1Y2t5X251bWJlciI6ICIz44CBOCIsCiAgICAic2NvcmUiOiA3NCwKICAgICJzdWl0IjogIuWQiOS8meaOqOi/myIKICB9LAogICJsb3R0ZXJ5IjogewogICAgImRyYXciOiAi5LuK5pmaIDIxOjE1IOW8gOWlliIsCiAgICAiaXNzdWUiOiAiMTMw5pyfIiwKICAgICJwaWNrcyI6IFsKICAgICAgIjA0IDA4IDEzIDE1IDI1IDMwICsxMiIsCiAgICAgICIwMSAwOSAyMCAyMiAyOSAzMyArMTEiLAogICAgICAiMDkgMTQgMTkgMjMgMjYgMzAgKzEzIiwKICAgICAgIjAxIDA5IDE0IDIyIDI2IDMzICsxNSIsCiAgICAgICIwNiAxMyAxNSAyNCAyNiAzMCArMDkiCiAgICBdLAogICAgInJlY29tbWVuZGVkIjogIjA2IDEzIDE1IDI0IDI2IDMwICswOSIsCiAgICAicmVzdWx0IjogewogICAgICAiYmx1ZSI6ICIwNSIsCiAgICAgICJpc3N1ZSI6ICIxMjnmnJ8iLAogICAgICAicmVkIjogIjAzIDA5IDE2IDIwIDI1IDMwIgogICAgfQogIH0sCiAgImx1bmFyIjogIuWNgeaciOWIneWbmyIsCiAgInB0IjogewogICAgImRhdGUiOiAiMjAyNi0xMS0yNyIsCiAgICAiZGV0YWlsIjogIuazqOWGjOa7oTHlubTvvIxBaXRoZXLor4HmmI4iLAogICAgInRpbWUiOiAiMTHmnIgyN+aXpSIsCiAgICAidGl0bGUiOiAiRmlsZUxpc3Tmu6HkuIDlubQiCiAgfSwKICAicmVtaW5kZXJzIjogWwogICAgewogICAgICAiZGV0YWlsIjogIumHjeW6huS4reW/g+WfjuWMuuWkqeawlCvnqb/ooaMr6LeR6L2m5o+Q6YaSIiwKICAgICAgInRpbWUiOiAi5q+P5aSpIDA4OjQ4IiwKICAgICAgInRpdGxlIjogIuS7iuaXpeWkqeawlCIKICAgIH0sCiAgICB7CiAgICAgICJkZXRhaWwiOiAi5ZGo5LqM5byA5aWW77yMNeazqMKlMTAiLAogICAgICAidGltZSI6ICIxMeaciDEw5pelIDE4OjAwIiwKICAgICAgInRpdGxlIjogIuWPjOiJsueQg+esrDEyOeacn+mihOa1iyIKICAgIH0sCiAgICB7CiAgICAgICJkZXRhaWwiOiAiMTI55pyf5byA5aWW77yM6YCQ5rOo5oql5aWWIiwKICAgICAgInRpbWUiOiAiMTHmnIgxMOaXpSAyMTo0OCIsCiAgICAgICJ0aXRsZSI6ICLlj4zoibLnkIPlvIDlpZblr7nlpZYiCiAgICB9LAogICAgewogICAgICAiZGV0YWlsIjogIuajgOafpeaYr+WQpui/kOihjCIsCiAgICAgICJ0aW1lIjogIuavj+WkqSAyMTozMCIsCiAgICAgICJ0aXRsZSI6ICJHTGFET1PmmZrnrb7liLAiCiAgICB9LAogICAgewogICAgICAiZGV0YWlsIjogInFoeGZseemCrueusemHjee7keajgOafpSIsCiAgICAgICJ0aW1lIjogIjEx5pyIMTTml6UgMDk6MzAiLAogICAgICAidGl0bGUiOiAi6YKu566x6YeN57uR5o+Q6YaSIgogICAgfSwKICAgIHsKICAgICAgImRldGFpbCI6ICI1MTJH5riv54mIIEhLJDQsODAw5Lul5LiL5Y+v6ICD6JmRIiwKICAgICAgInRpdGxlIjogIjE1UE3kuozmiYsiCiAgICB9LAogICAgewogICAgICAiZGV0YWlsIjogIuazqOWGjOa7oTHlubTvvIxBaXRoZXLor4HmmI4iLAogICAgICAidGltZSI6ICIxMeaciDI35pelIiwKICAgICAgInRpdGxlIjogIkZpbGVMaXN05ruh5LiA5bm0IgogICAgfQogIF0sCiAgInNvbGFyX3Rlcm0iOiAi56uL5YasIiwKICAidG9rZW5zIjogIlRva2VuIOWJqSAzMDnkur8gwrcg5ZGo6ZmQ6aKdIOWJqSA5NSUgwrcgMTHmnIgxOeaXpemHjee9riIsCiAgInVwZGF0ZWQiOiAiMjAyNi0xMS0xMlQxOToxMjowMCswODowMCIsCiAgIndlYXRoZXIiOiB7CiAgICAiZGV0YWlsIjogIjE14oSDIOS9k+aEnzE1LjDCsCDCtyDpnL4gwrcgQVFJIDYwIOiJryIsCiAgICAidGl0bGUiOiAi5LuK5pel5aSp5rCUIgogIH0KfQ==
+{
+  "fortune": {
+    "date": "2026-11-12",
+    "level": "平顺",
+    "lucky_color": "青绿",
+    "lucky_number": "3、8",
+    "score": 74,
+    "suit": "合伙推进"
+  },
+  "lottery": {
+    "draw": "今晚 21:15 开奖",
+    "issue": "130期",
+    "picks": [
+      "04 08 13 15 25 30 +12",
+      "01 09 20 22 29 33 +11",
+      "09 14 19 23 26 30 +13",
+      "01 09 14 22 26 33 +15",
+      "06 13 15 24 26 30 +09"
+    ],
+    "recommended": "06 13 15 24 26 30 +09",
+    "result": {
+      "blue": "02",
+      "issue": "130期",
+      "red": "01 02 06 16 20 28"
+    }
+  },
+  "lunar": "十月初四",
+  "pt": {
+    "date": "2026-11-27",
+    "detail": "注册满1年，Aither证明",
+    "time": "11月27日",
+    "title": "FileList满一年"
+  },
+  "reminders": [
+    {
+      "detail": "重庆中心城区天气+穿衣+跑车提醒",
+      "time": "每天 08:48",
+      "title": "今日天气"
+    },
+    {
+      "detail": "周二开奖，5注¥10",
+      "time": "11月10日 18:00",
+      "title": "双色球第129期预测"
+    },
+    {
+      "detail": "129期开奖，逐注报奖",
+      "time": "11月10日 21:48",
+      "title": "双色球开奖对奖"
+    },
+    {
+      "detail": "检查是否运行",
+      "time": "每天 21:30",
+      "title": "GLaDOS晚签到"
+    },
+    {
+      "detail": "qhxfly邮箱重绑检查",
+      "time": "11月14日 09:30",
+      "title": "邮箱重绑提醒"
+    },
+    {
+      "detail": "512G港版 HK$4,800以下可考虑",
+      "time": "待定",
+      "title": "15PM二手"
+    },
+    {
+      "detail": "注册满1年，Aither证明",
+      "time": "11月27日",
+      "title": "FileList满一年"
+    }
+  ],
+  "solar_term": "立冬",
+  "tokens": "Token 剩 309亿 · 周限额 剩 94% · 11月19日重置",
+  "updated": "2026-11-12T23:13:03+08:00",
+  "weather": {
+    "detail": "15℃ 体感15.0° · 霾 · AQI 60 良",
+    "title": "今日天气"
+  }
+}
