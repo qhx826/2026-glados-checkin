@@ -1,1 +1,73 @@
-ewogICJmb3J0dW5lIjogewogICAgImRhdGUiOiAiMjAyNi0xMS0yNSIsCiAgICAibGV2ZWwiOiAi5bmz6aG6IiwKICAgICJsdWNreV9jb2xvciI6ICLpnZLnu78iLAogICAgImx1Y2t5X251bWJlciI6ICIz44CBOCIsCiAgICAic2NvcmUiOiA3MywKICAgICJzdWl0IjogIuWktOiEkemjjuaatCIKICB9LAogICJsb3R0ZXJ5IjogewogICAgImRyYXciOiAi5LuK5pmaIDIxOjE1IOW8gOWlliIsCiAgICAiaXNzdWUiOiAiMTM15pyfIiwKICAgICJwaWNrcyI6IFsKICAgICAgIjA1IDEwIDEzIDIyIDI2IDMwICsxMSIsCiAgICAgICIwNCAxMiAxNCAyMCAyMSAyNSArMTIiLAogICAgICAiMDUgMTAgMTQgMjQgMjkgMzEgKzAxIiwKICAgICAgIjAxIDA1IDEyIDIyIDI2IDMyICswNCIsCiAgICAgICIwNiAxMCAxMyAyMCAyNiAyOSArMDIiCiAgICBdLAogICAgInJlY29tbWVuZGVkIjogIjA2IDEwIDEzIDIwIDI2IDI5ICswMiIsCiAgICAicmVzdWx0IjogewogICAgICAiYmx1ZSI6ICIwOCIsCiAgICAgICJpc3N1ZSI6ICIxMzXmnJ8iLAogICAgICAicmVkIjogIjAyIDEwIDE2IDIyIDI2IDMwIgogICAgfQogIH0sCiAgImx1bmFyIjogIuWNgeaciOWNgeS4gyIsCiAgInB0IjogewogICAgImRhdGUiOiAiMjAyNi0xMS0yNyIsCiAgICAiZGV0YWlsIjogIuazqOWGjOa7oTHlubTvvIxBaXRoZXLor4HmmI4iLAogICAgInRpbWUiOiAiMTHmnIgyN+aXpSIsCiAgICAidGl0bGUiOiAiRmlsZUxpc3Tmu6HkuIDlubQiCiAgfSwKICAicmVtaW5kZXJzIjogWwogICAgewogICAgICAiZGV0YWlsIjogIumHjeW6huS4reW/g+WfjuWMuuWkqeawlCvnqb/ooaMr6LeR6L2m5o+Q6YaSIiwKICAgICAgInRpbWUiOiAi5q+P5aSpIDA4OjQ4IiwKICAgICAgInRpdGxlIjogIuS7iuaXpeWkqeawlCIKICAgIH0sCiAgICB7CiAgICAgICJkZXRhaWwiOiAi5ZGo5pel5byA5aWW77yMNeazqMKlMTAiLAogICAgICAidGltZSI6ICIxMeaciDIy5pelIDE4OjQ4IiwKICAgICAgInRpdGxlIjogIuWPjOiJsueQ+esrDEzNOacn+mihOa1iyIKICAgIH0sCiAgICB7CiAgICAgICJkZXRhaWwiOiAiMTM05pyf5byA5aWW77yM6YCQ5rOo5oql5aWWIiwKICAgICAgInRpbWUiOiAiMTHmnIgyMuaXpSAyMTo0OCIsCiAgICAgICJ0aXRsZSI6ICLlj4zoibLnkIPlvIDlpZblr7nlpZYiCiAgICB9LAogICAgewogICAgICAiZGV0YWlsIjogInFoeGZseemCrueusemHjee7keajgOafpSIsCiAgICAgICJ0aW1lIjogIjEx5pyIMTTml6UgMDk6MzAiLAogICAgICAidGl0bGUiOiAi6YKu566x6YeN57uR5o+Q6YaSIgogICAgfSwKICAgIHsKICAgICAgImRldGFpbCI6ICI1MTJH5riv54mIIEhLJDQsODAw5Lul5LiL5Y+v6ICD6JmRIiwKICAgICAgInRpbWUiOiAi5b6F5a6aIiwKICAgICAgInRpdGxlIjogIjE1UE3kuozmiYsiCiAgICB9LAogICAgewogICAgICAiZGV0YWlsIjogIuazqOWGjOa7oTHlubTvvIxBaXRoZXLor4HmmI4iLAogICAgICAidGltZSI6ICIxMeaciDI35pelIiwKICAgICAgInRpdGxlIjogIkZpbGVMaXN05ruh5LiA5bm0IgogICAgfQogIF0sCiAgInNvbGFyX3Rlcm0iOiAi5bCP6ZuqIiwKICAidG9rZW5zIjogIlRva2VuIOWJqSAzMDnkur8gwrcg5ZGo6ZmQ6aKdIOWJqSA1OCUgwrcgMTHmnIgyNuaXpemHjee9riIsCiAgInVwZGF0ZWQiOiAiMjAyNi0xMS0yNlQwNTozNjowMCswODowMCIsCiAgIndlYXRoZXIiOiB7CiAgICAiZGV0YWlsIjogIjEz4oSDIOS9k+aEnzEyLjHCsCDCtyDpmLTml6Dpm6ggwrcgQVFJIDM5IOS8mCIsCiAgICAidGl0bGUiOiAi5LuK5pel5aSp5rCUIgogIH0KfQ==
+{
+  "fortune": {
+    "date": "2026-11-25",
+    "level": "平顺",
+    "lucky_color": "青绿",
+    "lucky_number": "3、8",
+    "score": 73,
+    "suit": "头脑风暴"
+  },
+  "lottery": {
+    "draw": "今晚 21:15 开奖",
+    "issue": "135期",
+    "picks": [
+      "05 10 13 22 26 30 +11",
+      "04 12 14 20 21 25 +12",
+      "05 10 14 24 29 31 +01",
+      "01 05 12 22 26 32 +04",
+      "06 10 13 20 26 29 +02"
+    ],
+    "recommended": "06 10 13 20 26 29 +02",
+    "result": {
+      "blue": "08",
+      "issue": "135期",
+      "red": "02 10 16 22 26 30"
+    }
+  },
+  "lunar": "十月十七",
+  "pt": {
+    "date": "2026-11-27",
+    "detail": "注册满1年，Aither证明",
+    "time": "11月27日",
+    "title": "FileList满一年"
+  },
+  "reminders": [
+    {
+      "detail": "重庆中心城区天气+穿衣+跑车提醒",
+      "time": "每天 08:48",
+      "title": "今日天气"
+    },
+    {
+      "detail": "周日开奖，5注¥10",
+      "time": "11月22日 18:48",
+      "title": "双色球第134期预测"
+    },
+    {
+      "detail": "134期开奖，逐注报奖",
+      "time": "11月22日 21:48",
+      "title": "双色球开奖对奖"
+    },
+    {
+      "detail": "qhxfly邮箱重绑检查",
+      "time": "11月14日 09:30",
+      "title": "邮箱重绑提醒"
+    },
+    {
+      "detail": "512G港版 HK$4,800以下可考虑",
+      "time": "待定",
+      "title": "15PM二手"
+    },
+    {
+      "detail": "注册满1年，Aither证明",
+      "time": "11月27日",
+      "title": "FileList满一年"
+    }
+  ],
+  "solar_term": "小雪",
+  "tokens": "Token 剩 309亿 · 周限额 剩 56% · 11月26日重置",
+  "updated": "2026-11-26T07:13:00+08:00",
+  "weather": {
+    "detail": "13℃ 体感12.1° · 阴无雨 · AQI 39 优",
+    "title": "今日天气"
+  }
+}
