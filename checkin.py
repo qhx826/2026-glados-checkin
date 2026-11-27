@@ -4,11 +4,18 @@
 2026 GLaDOS 自动签到 (积分增强版)
 
 功能：
-- 全自动签到
+- 全自动签到（新版 challenge/proof 协议，2026-11-07 官方调整后必需）
 - 精准获取当前积分 (Points)
 - PushPlus 微信推送（包含积分、剩余天数、签到结果）
 - 智能多域名切换 (优先 glados.cloud)
 - 支持 Cookie-Editor 导出格式
+
+新协议流程：
+  1) GET /api/user/checkin/challenge -> { code:0, nonce, ttl }
+  2) 等待 >= 2500ms（前端强制的人类反应时间下限，<=5s 为 excellent 档）
+  3) POST /api/user/checkin body: { token:<hostname>, nonce, proof }
+     proof = SHA256_HEX(nonce + "." + "glados-observe-v1")
+  缺 nonce/proof 的裸请求服务端仍返回 code:0，但只给 Base 档保底积分。
 """
 
 import requests
@@ -16,6 +23,9 @@ import json
 import os
 import sys
 import time
+import re
+import random
+import hashlib
 from datetime import datetime
 
 # Fix Windows Unicode Output
@@ -31,11 +41,30 @@ DOMAINS = [
     "https://glados.network",
 ]
 
+# UA：可用 GLADOS_UA 环境变量覆盖为登录浏览器的真实 UA
+# （服务端会做设备校验，UA 与登录设备不一致会返回 code=4 device-mismatch）
+UA = os.environ.get('GLADOS_UA', '').strip() or 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/158.0.0.0 Safari/537.36'
+
+def _chrome_major(ua):
+    m = re.search(r'Chrome/(\d+)', ua or '')
+    return m.group(1) if m else '141'
+
+_CHROME_MAJOR = _chrome_major(UA)
+
 HEADERS = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+    'User-Agent': UA,
     'Content-Type': 'application/json;charset=UTF-8',
     'Accept': 'application/json, text/plain, */*',
+    'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
+    'sec-ch-ua': f'"Chromium";v="{_CHROME_MAJOR}", "Not=A?Brand";v="24", "Google Chrome";v="{_CHROME_MAJOR}"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Windows"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'same-origin',
 }
+
+PROOF_SALT = 'glados-observe-v1'
 
 # ================= 工具函数 =================
 
@@ -62,7 +91,7 @@ def extract_cookie(raw: str):
     if raw.count('.') == 2 and '=' not in raw and len(raw) > 50:
         return 'koa:sess=' + raw
         
-    # Standard
+    # Standard (gld:sess=...; gld:sess.sig=...; gld:accts=...; gld:accts.sig=...)
     return raw
 
 def get_cookies():
@@ -88,27 +117,33 @@ class GLaDOS:
         self.exchange_info = ""
         self.plan = "?"
         
+    def req_domain(self, domain, method, path, data=None):
+        """向指定域名发一次请求"""
+        try:
+            url = f"{domain}{path}"
+            h = HEADERS.copy()
+            h['Cookie'] = self.cookie
+            h['Origin'] = domain
+            h['Referer'] = f"{domain}/console/checkin"
+            
+            if method == 'GET':
+                resp = requests.get(url, headers=h, timeout=10)
+            else:
+                resp = requests.post(url, headers=h, json=data, timeout=10)
+            
+            if resp.status_code == 200:
+                return resp.json()
+        except Exception as e:
+            log(f"⚠️ {domain} 请求失败: {e}")
+        return None
+
     def req(self, method, path, data=None):
         """带自动域名切换的请求"""
         for d in DOMAINS:
-            try:
-                url = f"{d}{path}"
-                h = HEADERS.copy()
-                h['Cookie'] = self.cookie
-                h['Origin'] = d
-                h['Referer'] = f"{d}/console/checkin"
-                
-                if method == 'GET':
-                    resp = requests.get(url, headers=h, timeout=10)
-                else:
-                    resp = requests.post(url, headers=h, json=data, timeout=10)
-                
-                if resp.status_code == 200:
-                    self.domain = d # Remember working domain
-                    return resp.json()
-            except Exception as e:
-                log(f"⚠️ {d} 请求失败: {e}")
-                continue
+            res = self.req_domain(d, method, path, data)
+            if res is not None:
+                self.domain = d # Remember working domain
+                return res
         return None
 
     def get_status(self):
@@ -153,7 +188,21 @@ class GLaDOS:
         return False
 
     def checkin(self):
-        """执行签到"""
+        """执行签到（新版 challenge/proof 协议）"""
+        # 1. 取挑战
+        ch = self.req('GET', '/api/user/checkin/challenge')
+        if ch and ch.get('code') == 0 and ch.get('nonce'):
+            nonce = str(ch['nonce'])
+            domain = self.domain  # 挑战成功的域名，签到必须同域
+            host = domain.replace('https://', '').replace('http://', '')
+            # 2. 等待人类反应时间（前端下限 2500ms，excellent 档 <=5s）
+            wait = 2.8 + random.random() * 1.7
+            log(f"挑战已获取，等待 {wait:.1f}s 后提交")
+            time.sleep(wait)
+            # 3. 计算 proof 并提交
+            proof = hashlib.sha256(f"{nonce}.{PROOF_SALT}".encode('utf-8')).hexdigest()
+            return self.req_domain(domain, 'POST', '/api/user/checkin', {'token': host, 'nonce': nonce, 'proof': proof})
+        log("⚠️ 挑战接口未返回 nonce，改用旧协议裸签（只能拿保底分）")
         return self.req('POST', '/api/user/checkin', {'token': 'glados.cloud'})
 
 # ================= 主程序 =================
@@ -181,6 +230,8 @@ def main():
         # 1. Checkin
         res = g.checkin()
         msg = res.get('message', 'Failure') if res else "Network Error"
+        if res and res.get('code') == 4:
+            log("❌ 设备校验不通过（device-mismatch）：脚本 UA 与登录浏览器不一致，需把 GLADOS_UA 换成登录浏览器的 UA")
         
         # 2. Get Info (Refresh data)
         g.get_status()
